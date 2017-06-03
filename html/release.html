@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .box{
+            width: 100%;
+            height: 100%;
+            margin: 0rem auto;
+            /*border: 1px solid #ccc;*/
+            font-size: 0.7rem;
+        }
+        .a_wrap{
+            text-align: center;
+            margin: 0.7rem;
+        }
+        form{
+            text-align: center;
+            padding:0.5rem 0;
+        }
+        p{
+            overflow: hidden;
+        }
+        form input, select{
+            display: inline;
+            width: 60%;
+            height: 1rem;
+            font-size: 0.5rem;
+            padding-left: 0.2rem;
+            float: right;
+            margin-right: 10%;
+        }
+        option{
+            width: 20%;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="goback-out">
+        <i id="goback" class="goback"></i>
+        <h6 class="goback-word"></h6>
+    </div>
+    <form action="" method="post">
+        <p>
+        需求：<input type="text" name="title" required="required">
+        </p>
+        <p>
+        品质：<!-- <input type="text" name="message"  required="required"> -->
+            <select name="message" id="">
+                <option value=""></option>
+                <option value="优">优</option>
+                <option value="良">良</option>
+                <option value="一般">一般</option>
+            </select>
+        </p>
+        <p>
+        价格：<input type="text" name="price"  required="required">
+        </p>
+        <p>
+        商户：<input type="text" name="man" required="required">
+        </p>
+        <p>
+        电话：<input type="text" name="tel" required="required">
+        </p>
+        <p>
+        <input type="submit" value="提交">
+        </p>
+    </form>
+    <!-- <div class="a_wrap">
+        <a href="demo.html">查看内容</a>
+    </div> -->
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/public.js"></script>
+<script>
+    $("form").submit(function () {
+        var datas=$(this).serialize(); //serialize()通过序列化获取表单值；
+        console.log(datas);
+        $.ajax({
+            type: "post",
+            url:"../php/post.php",
+            data:datas,
+            success:function (reponse) {
+               alert(reponse);
+                window.location.href="public.html";
+            }
+        })
+        return false;
+    })
+</script>
+</body>
+</html>

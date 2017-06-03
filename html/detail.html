@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .detail-wrap,.de-img{
+            width: 100%;
+            height: 100%;
+        }
+        .de-wrap{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        ul{
+            width:500%;
+            height: 37%;
+            overflow: hidden;
+        }
+        li{
+            width: 20%;
+            height: 100%;
+            float: left;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="detail-wrap">
+        <div class="goback-out">
+            <i id="goback" class="goback"></i>
+            <h6 class="goback-word">供应详情</h6>
+        </div>
+        <div class="de-img">
+            <div class="de-wrap">
+                <ul class="out">
+                    <li style="display: block"><img src="../images/白菜1.jpg" alt=""></li>
+                    <li><img src="../images/白菜2.jpg" alt=""></li>
+                    <li><img src="../images/白菜3.jpg" alt=""></li>
+                    <li><img src="../images/白菜4.jpg" alt=""></li>
+                    <li><img src="../images/白菜5.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="de-content">
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        var startx=0,endx=0,y=0,move=true;
+        document.addEventListener('touchstart',function(ev){
+            var touchs=ev.touches[0];
+            startx=touchs.pageX;
+            move=false;
+        },false)
+        document.addEventListener('touchmove',function(ev){
+            var touchs=ev.touches[0];
+            endx=touchs.pageX;
+            move=true;
+        },false)
+        document.addEventListener('touchend',function (){
+            if (!move) {
+                return false;
+            } else{
+                if ((endx-startx)<-6) {
+                    // alert('向左滑');
+                    if (y>=4) {
+                        y=4;
+                        return false;
+                    };
+                    $('.out li').eq(y).hide(200,'swing');
+                    $('.out li').eq(y+1).show();
+                    y++;
+                };
+                if ((endx-startx)>6) { //向右滑
+                    y--;
+                    if (y<0) {
+                        y=0;
+                        return false;
+                    };
+                    $('.out li').eq(y).show(200,'swing',function(){
+                        $('.out li').eq(y+1).hide();
+                    });
+                };
+            };
+
+        })
+    </script>
+</body>
+</html>

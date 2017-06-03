@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>已经发布内容</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .box{
+            width: 100%;
+            margin: 0rem auto;
+        }
+        .a_wrap{
+            text-align: center;
+            margin: 0.68rem;
+        }
+        .a_wrap a{
+            font-size: 0.5rem;
+        }
+        ul{
+            font-size: 0.45rem;
+            /*border: 1px solid red;*/
+            /*margin: 20px;*/
+        }
+        ul li{
+            margin: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="goback-out">
+        <i id="goback" class="goback"></i>
+        <h6 class="goback-word"></h6>
+    </div>
+    <div class="a_wrap">
+        <!-- <a href="release.html">返回发布信息</a> -->
+        <!-- <a href="search.html">查询已发内容</a> -->
+    </div>
+    <ul>
+
+    </ul>
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/public.js"></script>
+<script>
+    $.ajax({
+        type:"post",
+        url: "../php/demo.php",
+        dataType: "json",
+        success: function (data) {
+//            console.log(data);
+            for (var item in data){
+               var con=" <li><p>需求："+data[item].title+"</p><p>品质："+data[item].message+"</p><p>价格："+data[item].price+"</p><p>品质："+data[item].man+"</p><p>电话："+data[item].tel+"</p></li>";
+              $('ul').get(0).innerHTML+=con;
+            }
+        }
+    })
+
+    $("ul").on("click",".delete",function () {
+        var mids=$(this).attr("name");
+        $(this).parent().remove();
+        $.ajax({
+            type:"post",
+            url:"../php/delete.php",
+            data:{mid:mids},
+            success:function (response) {
+                alert(response);
+            }
+        })
+    })
+</script>
+</body>
+</html>

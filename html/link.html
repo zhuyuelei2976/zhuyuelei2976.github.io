@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>链接</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .link-wrap{
+            width: 100%;
+        }
+        .link-content{
+            width: 100%;
+        }
+
+        .images{
+            float: left;
+            margin-top: 0.1rem;
+            background: #f2f2f2;
+        }
+        .information{
+            width: 60%;
+            float: right;
+        }
+        .goods:before{
+            content: "物品:";
+        }
+        .value:before{
+            content: "价格:";
+        }
+        .publisher:before{
+            content: "售货人:";
+        }
+    </style>
+</head>
+<body>
+    <div class="link-wrap">
+        <div class="goback-out">
+            <i id="goback" class="goback"></i>
+            <h6 class="goback-word">菜价</h6>
+        </div>
+        <div class="link-content">
+            <ul class="shop-model">
+                <li class="images"><img src="../images/小白菜.jpg" alt=""></li>
+                <li class="information">
+                    <div class="goods">上海青</div>
+                    <div class="quality">良</div>
+                    <div class="value">1.7</div>
+                    <div class="tel"><a href="tel:18848967926" >18848967926</a></div>
+                </li>
+            </ul>
+            <ul class="shop-model">
+                <li class="images"><img src="../images/小白菜.jpg" alt=""></li>
+                <li class="information">
+                    <div class="goods">上海青</div>
+                    <div class="quality">优</div>
+                    <div class="value">2</div>
+                    <div class="tel"><a href="tel:18848967926" >18848967926</a></div>
+                </li>
+            </ul>
+            <ul class="shop-model">
+                <li class="images"><img src="../images/韭菜.jpg" alt=""></li>
+                <li class="information">
+                    <div class="goods">韭菜</div>
+                    <div class="quality">优</div>
+                    <div class="value">1.2</div>
+                    <div class="tel"><a href="tel:18848967926" >18848967926</a></div>
+                </li>
+            </ul>
+            <ul class="shop-model">
+                <li class="images"><img src="../images/韭菜.jpg" alt=""></li>
+                <li class="information">
+                    <div class="goods">韭菜</div>
+                    <div class="quality">中等</div>
+                    <div class="value">0.8</div>
+                    <div class="tel"><a href="tel:18848967926" >18848967926</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <!--<script src="../js/public.js"></script>-->
+    <script>
+        $(function(){
+            $('#goback').click(function(){
+                window.history.go(-1);
+            })
+        })
+    </script>
+</body>
+</html>

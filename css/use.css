@@ -1,0 +1,24 @@
+body{
+    width: 100%;
+}
+#register{
+    width: 7rem;
+    height: 5rem;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+#register input{
+    padding-left: 0.1rem;
+    width: 4rem;
+    height: 0.75rem;
+    margin: 0.15rem auto;
+}
+#register .add{
+    width: 4rem;
+    height:0.75rem;
+    color: white;
+    background-color: #1849ed;
+    border: 0rem;
+    border-radius: 0.1rem;
+    margin: 0.3rem auto;
+}

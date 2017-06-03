@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>农药</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/public.css">
+    <style>
+        .f-wrap,.f-content{
+            width: 100%;
+        }
+        .images{
+            float: left;
+            margin-top: 0.1rem;
+            background: #f2f2f2;
+        }
+        .information{
+            width: 60%;
+            float: right;
+        }
+        .title:before{
+            content: "物品:";
+        }
+        .message:before{
+            content: "品质:";
+        }
+        .price:before{
+            content: "价格:";
+        }
+        .man:before{
+            content: "售货人:";
+        }
+        .tel:before{
+            content: "电话:";
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="f-wrap">
+    <div class="goback-out">
+        <i id="goback" class="goback"></i>
+        <h6 class="goback-word">白菜</h6>
+    </div>
+    <div class="f-content">
+        <ul class="shop-model">
+            <li class="images"><img src="../../images/白菜4.jpg" alt=""></li>
+            <li class="information">
+                <div class="title">白菜</div>
+                <div class="message"></div>
+                <div class="price">1.5</div>
+                <div class="man">张</div>
+                <div class="tel">188489846</div>
+            </li>
+        </ul>
+    </div>
+    <div class="f-content">
+        <ul class="shop-model">
+            <li class="images"><img src="../../images/白菜5.jpg" alt=""></li>
+            <li class="information">
+                <div class="title">白菜</div>
+                <div class="message"></div>
+                <div class="price">1.5</div>
+                <div class="man">张</div>
+                <div class="tel">188489846</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script >
+    $(function(){
+        $('#goback').click(function(){
+            window.history.go(-1);
+        })
+    })
+</script>
+</body>
+</html>

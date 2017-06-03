@@ -1,0 +1,380 @@
+body{
+    background-color: #f2f2f2;
+}
+.wrap{
+    font-size: 1em;
+    position: relative;
+    /*background-color: #e8e8e8;*/
+}
+header{
+    width:100%;
+    height:1.25rem;
+    text-align: center;
+    background-color: #1fbaf3;
+    color: white;
+    position: fixed;
+    left:0 ;
+    top:0;
+    z-index:1;
+    /*display: none;*/
+}
+header .text{
+    float: left;
+    width: 100%;
+    height: 1.25rem;
+}
+header .submit{
+    float: right;
+    width: 20%;
+    height: 1.25rem;
+}
+/*tab*/
+.tab-hade{
+    display: none;
+}
+.show{
+    display: block;
+}
+/*main1*/
+.main{
+    margin: 0 auto 2.301rem;
+}
+.main1{
+    margin-top: 1.25rem;
+}
+#outer{
+    width:100%;
+    height: 6rem;
+    position: relative;
+}
+#wrap{
+    width:100%;
+    overflow: hidden;
+}
+#con{
+    width: 600%;
+    overflow: hidden;
+}
+#con img{
+    width: 16.66666%;
+    height: 6rem;
+    float: left;
+}
+#list{
+    width: 3.1rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0.4rem;
+    left: 35%;
+}
+#list li{
+    width: 0.3rem;
+    height: .3rem;
+    float: left;
+    background: white;
+    color: green;
+    margin: 5px;
+    /*line-height: 10px;*/
+    /*text-align: center;*/
+    /*font-size: 10px;*/
+    border-radius: 0.15rem;
+}
+#list .select{
+    background: #18b4ed;
+    color: #fff;
+}
+.nav [class*="word"]{
+    font-size: 0.4rem;
+    color: #333;
+    text-align: center;
+}
+.nav{
+    width:100%;
+    height:5rem;
+    overflow: hidden;
+    background-color: white;
+}
+.nav>div{
+    width: 2.00rem;
+    height:1.9rem;
+    margin: 0.5rem 0.25rem 0;
+    float: left;
+}
+.nav .c-logo1{
+    background: url("../images/c-logo1.png") center center no-repeat;
+}
+.nav .c-logo2{
+    background: url("../images/c-logo2.png") center center no-repeat;
+}
+.nav .c-logo3{
+    background: url("../images/c-logo3.png") center center no-repeat;
+}
+.nav .c-logo4{
+    background: url("../images/c-logo4.png") center center no-repeat;
+}
+.nav .c-logo5{
+    background: url("../images/c-logo5.png") center center no-repeat;
+}
+.nav .c-logo6{
+    background: url("../images/c-logo6.png") center center no-repeat;
+}
+.nav [class*="c-logo"]{
+    width: 1rem;
+    height: 1rem;
+    margin: 0.15rem auto;
+    background-size: contain;
+}
+a{
+    text-decoration: none;
+}
+.featured h6{
+    width:100%;
+    height: 1.25rem;
+    font-size: 0.5rem;
+    background: url("../images/back.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    line-height: 1.25rem;
+    text-align: center;
+}
+.featured h6 p{
+    width: 100%;
+    height: 1.25rem;
+    background: linear-gradient(to right,rgba(255,0,72,1) 0%,rgba(255,3,74,1) 40%,rgba(255,93,27,1) 60%,rgba(255,13,1,1) 100%);
+    background: -webkit-linear-gradient(to right,rgba(255,0,72,1) 0%,rgba(255,3,74,1) 40%,rgba(255,93,27,1) 60%,rgba(255,13,1,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.buy-inf{
+    width:100%;
+}
+.buy-inf h6{
+    width: 100%;
+    height:1rem;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.5rem;
+}
+.shop-model{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    font-size: 0.4rem;
+    margin-top: 0.2rem;
+}
+.shop-model li{
+    /* float: left; */
+    margin-top: 0.1rem; 
+    background: #f2f2f2;
+}
+.shop-model p{
+    /* width: 50%; */
+    padding-left: 0.4rem;
+    font-size: 0.6rem;
+}
+.images{
+    width: 40%;
+    height: 3rem;
+}
+.information{
+    width: 60%;
+    height: 3rem;
+    padding: 0.1rem;
+}
+.title:before,
+.message:before,
+.man:before,
+.price:before,
+.tel:before{
+    width: 20%;
+    font-weight: bold;
+}
+.title:before{
+    content: '需求：';
+}
+.message:before{
+    content: '品质：';
+}
+.man:before{
+    content: "发布人：";
+}
+.price:before{
+    content: '价格：';
+}
+.price:after{
+    content: '元';
+}
+.tel:before{
+    content: '联系电话：';
+}
+/*main2*/
+.class-content{
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.class-content>ul{
+    float: right;
+}
+.home{
+    font-size: 0.5rem;
+    font-weight:bold;
+    width: 30%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.home li{
+    width:100%;
+    text-align: center;
+    height:1.5rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #d1d1d1;
+}
+.content{
+    width: 70%;
+}
+.content li{
+    width: 100%;
+    font-size: 0.4rem;
+    overflow: hidden;
+    padding: 5%;
+}
+[class*="con-child"] div{
+    width: 30%;
+    float: left;
+    height:1rem;
+    line-height: 1rem;
+    text-align: center;
+    margin: 0.25rem 1.5%;
+    border: 1px solid #ccc;
+}
+.TabConChild{
+    display: none;
+}
+.main2 .select{
+    border-right: 1px solid #f2f2f2;
+    color: #00aeef;
+    background-color: #f2f2f2;
+}
+.content .show{
+    display: block;
+}
+/*main3*/
+.myinfo{
+    width: 100%;
+    height: 3rem;
+    background-color: #337ab7;
+    position: relative;
+}
+.myinfo button{
+    font-size: 0.45rem;
+    position: absolute;
+    width: 2rem;
+    border-radius: 0.15rem;
+    background-color: #337ab7;
+    border-color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.8);
+}
+.myinfo button a{
+    display: block;
+    width: 100%;
+}
+.myinfo button:nth-of-type(1){
+    left:2.25rem;
+    bottom:1rem;
+}
+.myinfo button:nth-of-type(2){
+    right: 2.25rem;
+    bottom: 1rem;
+}
+.release,.zhongzhi{
+    background-color: #337ab7;
+    width:95%;
+    padding:0.2rem;
+    color: #fff;
+    font-size: 0.65rem;
+    margin:0.3rem auto 0;
+}
+.zhongzhi .zz_link{
+    display: none;
+}
+.release a,.zhongzhi a{
+    color: #fff;
+}
+/*foot*/
+.footer{
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+[class*="ft-public"]{
+    height: 2rem;
+    width: 33.333333333333333333333333333%;
+    border-top: 1px solid #ccc;
+    float: left;
+}
+.footer [class*="logo"]{
+    height:1rem;
+    margin: 0.2rem auto 0.1rem;
+}
+.footer [class*="word"]{
+    text-align: center;
+    font-size: 0.5rem;
+}
+.footer .logo1{
+    background: url('../images/logo1-1.png') center 0 no-repeat;
+}
+.footer .logo2{
+    background: url('../images/logo2-1.png') center 0 no-repeat;
+}
+.footer .logo3{
+    background: url('../images/logo3-1.png') center 0 no-repeat;
+}
+.footer .select{
+    color: #00aeef;
+}
+.footer .select .logo1{
+    background: url('../images/logo1-2.png') center 0 no-repeat;
+}
+.footer .select .logo2{
+    background: url('../images/logo2-2.png') center 0 no-repeat;
+}
+.footer .select .logo3{
+    background: url('../images/logo3-2.png') center 0 no-repeat;
+}
+/*返回公用*/
+.goback-out{
+    width: 100%;
+    height: 1.5rem;
+    position: relative;
+    background-color: #00aeef;
+}
+.goback{
+    position: absolute;
+    left: 0.5rem;
+    top: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background: url("../images/goback.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.goback-word{
+    position: absolute;
+    left: 2rem;
+    top: 0.25rem;
+    height: 1rem;
+    line-height: 1rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid #fff;
+    color: #fff;
+}
+
+
+
+.information

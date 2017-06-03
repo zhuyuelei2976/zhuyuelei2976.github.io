@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>农药</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .f-wrap,.f-content{
+            width: 100%;
+        }
+        .images{
+            float: left;
+            margin-top: 0.1rem;
+            background: #f2f2f2;
+        }
+        .information{
+            width: 60%;
+            float: right;
+        }
+        .goods:before{
+            content: "物品:";
+        }
+        .value:before{
+            content: "价格:";
+        }
+        .publisher:before{
+            content: "售货人:";
+        }
+
+    </style>
+</head>
+<body>
+<div class="f-wrap">
+    <div class="goback-out">
+        <i id="goback" class="goback"></i>
+        <h6 class="goback-word">菜种</h6>
+    </div>
+    <div class="f-content">
+        <ul class="shop-model">
+            <li class="images"><img src="../images/24d.jpg" alt=""></li>
+            <li class="information">
+                <div class="goods">辣椒</div>
+                <div class="value">4.5</div>
+                <div class="publisher">杨</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script >
+    $(function(){
+        $('#goback').click(function(){
+            window.history.go(-1);
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/use.css">
+</head>
+<body>
+<div class="goback-out">
+    <i id="goback" class="goback"></i>
+    <h6 class="goback-word"></h6>
+</div>
+<form id="register">
+    <input type="text" class="use-name" name="user">
+    <input type="password" class="pass-word" name="pass">
+    <input type="submit" class="add">
+</form>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    $(".add").click(function(){
+        $.ajax({
+            type: "get",
+            url: "../php/get.php",
+            data: $("#register").serialize(),
+            cache: true,
+            dataType: "text/json",
+            success: function (data){
+                var json=eval('('+data+')');
+                console.log(json);
+                if(json.err){
+                    alert(json.msg);
+                }
+            },
+            error: function(data){
+                    console.log(data);
+                }
+        })
+
+    })
+    $(function(){
+        $('#goback').click(function(){
+            window.history.go(-1);
+        })
+    })
+</script>
+</body>
+</html>

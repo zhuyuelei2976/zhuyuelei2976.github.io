@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询已经发布内容</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .box{
+            width: 100%;
+            margin: 0rem auto;
+            /* border: 1px solid #ccc; */
+        }
+        .a_warp{
+            text-align: center;
+            margin: 20px;
+        }
+        .a_warp a{
+            font-size: 24px;
+        }
+        form{
+            text-align: center;
+        }
+        input{
+            width: 80%;
+            height: 1rem;
+            margin:0.5rem auto;
+            font-size: 24px;
+            padding-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="goback-out">
+        <i id="goback" class="goback"></i>
+        <h6 class="goback-word"></h6>
+    </div>
+    <form action="" method="get">
+        <input type="text" name="title" required="required">
+        <input type="submit" value="查询">
+    </form>
+    <div class="con"></div>
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/public.js"></script>
+<script>
+    $("form").submit(function () {
+        $.ajax({
+            type:"get",
+            url:"../php/search.php",
+            data:{val:$("input[type=text]").val()},
+            success:function (response) {
+                $(".con").html(response);
+            }
+        })
+        return false;
+    })
+</script>
+</body>
+</html>
